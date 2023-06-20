@@ -1,6 +1,6 @@
 [build]
   publish = "/views"
 
-[edge_functions]
-  path = "/"
+[[edge_functions]]
+  path = "/api"
   functions = "api"
