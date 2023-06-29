@@ -1,16 +1,18 @@
 const express = require('express');
+// ejs = require('express-handlebars');
 const serverless = require("serverless-http");
 // const PORT =  3000;
 const app = express();
 const path = require('path');
 const router = express.Router();
+app.set('views', path.join(__dirname +  '/../views'));
 app.set('view engine', 'ejs');
-
-
-app.use('/static', express.static(__dirname + '../../src'));
+app.engine('ejs', require('ejs').__express);
+// app.use(express.static('../../../src'))
+app.use(express.static(__dirname + '/../src'));
 
 router.get('/', (req, res) => {
-    res.render('index')
+    res.render('index.html')
     console.log(__dirname);
   })
 
