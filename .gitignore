@@ -21,5 +21,6 @@ README-template.node_modules
 lolo.html
 shoes.json
 noadd
+package-lock.json
 # Local Netlify folder
 .netlify
