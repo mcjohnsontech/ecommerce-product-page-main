@@ -12,7 +12,7 @@ app.engine('ejs', require('ejs').__express);
 app.use(express.static(__dirname + '/../src'));
 
 router.get('/', (req, res) => {
-    res.render('index.html')
+    res.render('index')
     console.log(__dirname);
   })
 
